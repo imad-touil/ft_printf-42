@@ -1,4 +1,6 @@
 # ft_printf-42
 
 
-Funny World
+# Hello Funny World
+
+# VARIADIC FUNCTIONS
