@@ -8,4 +8,6 @@
 		The goal of this project is simple: replicate the printf function.
 		In a nutshell, the printf function is a command to display a formatted string on the screen.
 	</p>
+	<img src="./image.png">
+	</img>
 </div>
