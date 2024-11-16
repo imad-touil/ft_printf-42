@@ -13,8 +13,14 @@
 		<h3>Custom Variadic Functions</h3>
 	<p>
 		Creating custom variadic functions in C requires the use of four macros:
+		<br>
 		<i>
-			va_list, va_start, va_arg, and va_end.
+			|----> va_list
+			|----> va_start
+			|----> va_arg
+			|----> va_end
 		</i>
 	</P>
 </div>
+
+###
