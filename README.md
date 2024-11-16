@@ -15,10 +15,10 @@
 		Creating custom variadic functions in C requires the use of four macros:
 		<br>
 		<i>
-			|----> va_list
-			|----> va_start
-			|----> va_arg
-			|----> va_end
+			|----> va_list<br>
+			|----> va_start<br>
+			|----> va_arg<br>
+			|----> va_end<br>
 		</i>
 	</P>
 </div>
