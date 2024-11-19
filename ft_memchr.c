@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 02:35:31 by imatouil          #+#    #+#             */
-/*   Updated: 2024/11/18 15:49:21 by imatouil         ###   ########.fr       */
+/*   Created: 2024/11/19 15:54:06 by imatouil          #+#    #+#             */
+/*   Updated: 2024/11/19 15:54:27 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int nbr)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	res;
+	size_t			i;
+	unsigned char	*str;
 
-	res = 0;
-	if (nbr == -2147483648)
-		return (write(1, "-2147483648", 11));
-	if (nbr < 0)
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
 	{
-		res += write(1, "-", 1);
-		nbr *= -1;
+		if (str[i] == (unsigned char)c)
+			return ((void *)s + i);
+		i++;
 	}
-	if (nbr > 9)
-		res += ft_putnbr(nbr / 10);
-	res += ft_putchar(nbr % 10 + 48);
-	return (res);
+	return (0);
 }

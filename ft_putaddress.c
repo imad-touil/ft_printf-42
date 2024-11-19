@@ -6,28 +6,11 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 22:12:30 by imatouil          #+#    #+#             */
-/*   Updated: 2024/11/17 13:40:41 by imatouil         ###   ########.fr       */
+/*   Updated: 2024/11/19 12:43:14 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-// int   ft_putaddress(unsigned long nb)
-// {
-// 	int	res;
-// 	char	*base;
-
-// 	res = 0;
-// 	base = "0123456789abcdef";
-// 	if (nb >= 16)
-// 	{
-// 		res += ft_putaddress(nb / 16);
-// 		res += ft_putaddress(nb % 16);
-// 	}
-// 	else
-// 		res += ft_putchar(base[nb % 16]);
-// 	return (res);
-// }
 
 int	ft_putaddress(void *ptr)
 {
@@ -45,5 +28,5 @@ int	ft_putaddress(void *ptr)
 	if (nb >= 16)
 		ft_putaddress((void *)(nb / 16));
 	res += ft_putchar(base[nb % 16]);
-	return(res);
+	return (res);
 }
